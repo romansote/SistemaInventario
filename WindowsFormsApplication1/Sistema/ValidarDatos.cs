@@ -12,7 +12,6 @@ namespace WindowsFormsApplication1
     {
         public String total;
 
-
         public void ValidarString(KeyPressEventArgs e)
         {
             if (Char.IsLetter(e.KeyChar))
@@ -23,9 +22,8 @@ namespace WindowsFormsApplication1
                 e.Handled = false;
             else
                 e.Handled = true;
-
-
         }
+        
         public void ValidarDigitos(KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar))
@@ -44,7 +42,5 @@ namespace WindowsFormsApplication1
 
             return this.total;
         }
-
-
     }
 }
