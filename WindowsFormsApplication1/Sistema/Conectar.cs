@@ -16,11 +16,9 @@ namespace WindowsFormsApplication1
 
         public SqlConnection conexion;
         public string conneccion;
-
         public SqlCommand cmd;
         SqlDataReader reader;
         SqlDataReader res;
-
 
         public Conectar()
         {
@@ -70,8 +68,6 @@ namespace WindowsFormsApplication1
             this.Conectarx();
             SqlCommand comm = new SqlCommand(Query, conexion);
             int filasEn = comm.ExecuteNonQuery();
-
-
             Desconectar();
         }
         public void BorrarDatos(String Query)
@@ -89,15 +85,6 @@ namespace WindowsFormsApplication1
 
         public void insertarVenta()
         {
-            string nombreg = "roman";
-
-            //  MessageBox.Show(idProductos+"-"+idCliente+"-"+MedioPago+"-"+fecha+"-"+PrecioVenta);
-
-
-            /*     string cadena = "INSERT INTO Ventas";
-                 cadena += "(id_producto,id_cliente,id_MedioPago,fecha_Venta,PrecioVenta)";
-                 cadena += "Values('" + idProductos + "'," + idCliente + "," + MedioPago + ",'" + fecha + "','" + PrecioVenta + "')";
-                 MessageBox.Show(cadena); */
             String cadena = "Insert Into Categoria_Productos(nombreCategoria)";
             cadena += "Values('" + nombreg + "')";
             SqlCommand cmd = new SqlCommand(cadena, conexion);
@@ -150,18 +137,8 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("No se pudo ejecutar la consulta, " + ex.ToString());
             }
+            
             return res;
-
-            /**   cmd = new SqlCommand("Select * from Clientes",conexion);
-
-              res = cmd.ExecuteReader();
-
-               while(res.Read())
-               {
-                   MessageBox.Show(""+res["NombreCliente"]);
-               }
-             * 
-             * **/
 
         }
 
