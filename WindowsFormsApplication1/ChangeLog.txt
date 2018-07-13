@@ -1,0 +1,3 @@
+- Login OK
+- Agregar usuarios OK
+- Multi Usuarios En desarrollo
